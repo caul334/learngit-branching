@@ -102,15 +102,23 @@ git commit
 
 ### 5.1 Rebasing over 9000 times
 ```
-test
+git rebase main bugFix
+git rebase bugFix side
+git rebase side another
+git branch -f main another
 ```
 ### 5.2 Multiple parents
 ```
-test
+git branch bugWork main~^2~1
 ```
 ### 5.3 Branch Spaghetti
 ```
-test
+git checkout one
+git cherry-pick C4 C3 C2
+git checkout two
+git cherry-pick C5 C4 C3 C2
+git checkout two
+git branch -f three c2
 ```
 
 
