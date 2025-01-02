@@ -1,6 +1,8 @@
 # learngit-branching
 https://learngitbranching.js.org/
 
+![image](https://github.com/user-attachments/assets/edfa57c2-23c1-4b48-80fc-29ad86e13603)
+
 
 # Main
 
