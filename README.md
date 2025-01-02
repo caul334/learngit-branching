@@ -11,62 +11,93 @@ git commit
 ```
 ### 1.2 Branching in Git
 ```
-test
+git branch bugFix
+git checkout bugFix
 ```
 ### 1.3 Merging in Git
 ```
-test
+git checkout -b bugFix
+git commit
+git checkout main
+git commit
+git merge bugFix
 ```
 ### 1.4 Rebase Introduction
 ```
-test
+git branch bugFix
+git checkout bugFix
+git commit
+git checkout main
+git commit
+git rebase main bugFix
 ```
 
 ### 2.1 Detach yo' HEAD
 ```
-test
+git checkout C4
 ```
 ### 2.2 Relative Refs (^)
 ```
-test
+git checkout HEAD^
 ```
 ### 2.3 Relative Refs #2 (~)
 ```
-test
+git branch -f bugFix C0
+git branch -f main C6
+git checkout C1
 ```
 ### 2.4 Reversing Changes in Git
 ```
-test
+git reset C1
+git checkout pushed
+git revert pushed
 ```
 
 ### 3.1 Cherry-pick Intro
 ```
-test
+git cherry-pick C3 C4 C7
 ```
 ### 3.2 Interactive Rebase Intro
 ```
-test
+git rebase -i C1
+(remove C2 and change C4/C5)
 ```
 
 ### 4.1 Grabbing Just 1 Commit
 ```
-test
+git checkout main
+git cherry-pick C4
 ```
+
 ### 4.2 Juggling Commits
 ```
-test
+git rebase -i main
+(change C2 and C3)
+git commit --amend
+git rebase -i main
+(change C2 and C3)
+git branch -f main caption
+
 ```
 ### 4.3 Juggling Commits #2
 ```
-test
+git checkout main
+git cherry-pick C2
+git commit --amend
+git cherry-pick C3
 ```
 ### 4.4 Git Tags
 ```
-test
+git tag v0 C1
+git checkout C2
+git tag v1
 ```
 ### 4.5 Git Describe
 ```
-test
+git describe main
+git describe side
+git describe bugFix
+git commit
 ```
 
 ### 5.1 Rebasing over 9000 times
