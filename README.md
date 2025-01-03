@@ -123,70 +123,113 @@ git checkout two
 git branch -f three c2
 ```
 
+![image](https://github.com/user-attachments/assets/8c1331fa-c935-4f1d-990f-9509025e2e15)
+
+
 
 # Remote
 ### 1.1 Clone Intro
 ```
-test
+git clone
 ```
 ### 1.2 Remote Branches
 ```
-test
+git commit
+git checkout o/main
+git commit
 ```
 ### 1.3 Git Fetchin'
 ```
-test
+git fetch
 ```
 ### 1.4 Git Pullin'
 ```
-test
+git pull
 ```
 ### 1.5 Faking Teamwork
 ```
-test
+git clone
+git fakeTeamwork main 2
+git commit
+git pull
 ```
 ### 1.6 Git Pushin'
 ```
-test
+git commit
+git commit
+git push
 ```
 ### 1.7 Diverged History
 ```
-test
+git clone
+git fakeTeamwork main 1
+git commit
+git pull --rebase
+git push
 ```
 ### 1.8 Locked Main
 ```
-test
+git branch -f main o/main
+git checkout -b feature C2
+git push origin feature
 ```
-
 ### 2.1 Push Main!
 ```
-test
+git checkout main
+git pull --rebase
+git checkout side1
+git rebase C8
+git checkout side2
+git rebase side1
+git checkout side3
+git rebase side2
+git branch -f main side3
+git checkout main
+git push
 ```
 ### 2.2 Merging with remotes
 ```
-test
+git fetch
+git branch -f main C8
+git checkout main
+git merge side1
+git merge side2
+git merge side3
+git push
 ```
 ### 2.3 Remote Tracking
 ```
-test
+git checkout -b side o/main
+git commit
+git pull --rebase
+git push
 ```
 ### 2.4 Git push arguments
 ```
-test
+git push origin foo
+git push origin main
 ```
 ### 2.5 Git push arguments -- Expanded!
 ```
-test
+git push origin foo:main
+git push origin HEAD^:foo
 ```
 ### 2.6 Fetch arguments
 ```
-test
+git fetch origin C6:main
+git fetch origin C3:foo
+git checkout foo
+git merge main
 ```
 ### 2.7 Source of nothing
 ```
-test
+git push origin :foo
+git fetch origin :bar
 ```
 ### 2.8 Pull arguments
 ```
-test
+git fetch origin C3:foo
+git fetch origin C2:side
+git merge foo
+git merge side
 ```
